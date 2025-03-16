@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <img src="/logo-colegio.png" alt="Logo Colegio">
-      <h1>Unidad Educativa Tejada Triangular</h1>
+      <h1>Unidad Educativa Tejada Triangular 1</h1>
     </div>
     <div class="hamburger" @click="toggleMenu">
       <div class="bar"></div>
