@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- instertamos un stilo css pero llamamos al archivo -->
+     <link rel="stylesheet" href="TejadaTriangular/src/assets/css/index.css">
+    <title>Tejada Triangular</title>
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('TejadaTriangular\public\LogoTejada.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        opacity: 0.1;
+        pointer-events: none; /* Evita que interfiera con los elementos de la página */
+        z-index: -1; /* Lo pone detrás del contenido */
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

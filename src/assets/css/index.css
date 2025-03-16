@@ -1,0 +1,9 @@
+body {
+    background-image: url('../../../public/LogoTejada.png'); /* Ruta de la imagen */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* Ajusta la imagen sin recortarla */
+    background-attachment: fixed; /* Para que la imagen no se mueva con el scroll */
+    opacity: 0.1; /* Ajusta la transparencia de la marca de agua */
+  }
+  

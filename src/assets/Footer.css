@@ -1,0 +1,132 @@
+/* Importamos la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos generales del footer */
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000); /* Mejor contraste */
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-out;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo y nombre de la institución */
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.footer-logo img {
+    height: 160px;
+    width: 150px;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.footer-logo h1 {
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de contacto */
+.footer-contact,
+.footer-social {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.footer-contact h2,
+.footer-social h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    color: #FFD700; /* Color dorado para resaltar */
+}
+
+/* Estilo de los textos y enlaces */
+.footer-contact p,
+.footer-contact a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+    color: #FFD700;
+    font-weight: 600;
+}
+
+/* Redes sociales */
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    justify-content: center;
+}
+
+.footer-social li {
+    display: inline;
+}
+
+/* Estilos mejorados para los iconos */
+.footer-social a {
+    background: #e9e9e9; /* Color dorado */
+    color: #1a1a1a;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* Efecto hover en iconos */
+.footer-social a:hover {
+    background: white;
+    color: #8B0000;
+    transform: scale(1.2);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-social {
+        margin-top: 20px;
+    }
+}
