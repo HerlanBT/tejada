@@ -1,8 +1,13 @@
 <template>
-  <div class="gallery-container">
+  <div 
+    class="gallery-container" 
+    :style="{ backgroundImage: `url(${imagenes[activeIndex]?.url})` }"
+  >
+    <div class="gallery-blur"></div> <!-- Capa difuminada -->
+    
     <button @click="scrollLeft" class="nav-btn left">‹</button>
+    
     <div class="gallery" ref="gallery">
-      <!-- Solo se muestra la imagen activa -->
       <div 
         v-for="(imagen, index) in imagenes" 
         :key="index" 
@@ -11,14 +16,15 @@
         <img :src="imagen.url" :alt="'Imagen ' + (index + 1)" />
       </div>
     </div>
+    
     <button @click="scrollRight" class="nav-btn right">›</button>
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from "vue";
 
-const gallery = ref(null);
+<script setup>
+import { ref, computed, onMounted } from "vue";
+
 const imagenes = ref([]);
 const activeIndex = ref(0);  // Índice de la imagen activa
 
@@ -42,21 +48,30 @@ const scrollRight = () => {
   activeIndex.value = (activeIndex.value + 1) % imagenes.value.length;
 };
 
-// Función para cambiar la imagen automáticamente
+// Cambio automático de imágenes
 const cambiarImagenAutomatica = () => {
   setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % imagenes.value.length;
-  }, 3000); // Cambia la imagen cada 3 segundos
+  }, 3000); // Cada 3 segundos
 };
+
+// ** Computed Property para el efecto difuminado **
+const backgroundStyle = computed(() => {
+  if (!imagenes.value.length) return {}; // Si no hay imágenes, no hacer nada
+  return {
+    backgroundImage: `url(${imagenes.value[activeIndex.value].url})`,
+  };
+});
 
 onMounted(() => {
   cargarImagenes();
-  cambiarImagenAutomatica();  // Iniciar el cambio automático
+  cambiarImagenAutomatica();
 });
 </script>
 
+
 <style scoped>
-/* Contenedor principal con botones de navegación */
+/* Contenedor principal */
 .gallery-container {
   position: relative;
   display: flex;
@@ -64,24 +79,39 @@ onMounted(() => {
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  max-width: 100vw;  /* Se asegura que ocupe el 100% del ancho de la pantalla */
+  max-width: 100vw;
   margin: auto;
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  height: 720px;  /* Altura adaptable, puedes ajustarlo según tu diseño */
+  height: 720px;
+  background-size: cover;
+  background-position: center;
 }
 
+/* Capa difuminada */
+.gallery-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
 
-/* Galería centrada */
+/* Galería */
 .gallery {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   scroll-behavior: smooth;
   padding: 20px;
-  gap: 15px;
   width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 /* Ítems de la galería */
@@ -105,8 +135,8 @@ onMounted(() => {
 
 .gallery-item img {
   width: 100%;
-  height: 100%;  /* Ajustamos para que ocupe toda la altura del contenedor */
-  object-fit: cover; /* Las imágenes se recortan para llenar el contenedor manteniendo la proporción */
+  height: 100%;
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -122,7 +152,7 @@ onMounted(() => {
   padding: 10px;
   font-size: 24px;
   border-radius: 50%;
-  z-index: 10;
+  z-index: 3;
 }
 
 .left {
@@ -136,6 +166,7 @@ onMounted(() => {
 .nav-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Responsive: ajustes para pantallas pequeñas */
 @media (max-width: 768px) {

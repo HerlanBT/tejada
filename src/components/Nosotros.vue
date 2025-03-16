@@ -1,119 +1,134 @@
 <template class="content">
-  <section class="about">
-    <h2>Nosotros</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim, vehicula pulvinar malesuada massa hendrerit
-      quis parturient, primis sociis ligula sollicitudin mattis rhoncus luctus. Dignissim sapien in malesuada platea
-      montes neque curabitur sociis facilisis varius, pellentesque non at feugiat fringilla maecenas posuere justo
-      egestas, purus ligula vivamus nascetur arcu auctor aliquam potenti sodales. Placerat mus leo orci massa inceptos
-      lobortis neque iaculis bibendum, egestas velit fames pharetra suscipit a fusce primis blandit, curabitur eleifend
-      urna senectus turpis taciti purus ultricies. Tempor volutpat sollicitudin nunc imperdiet sapien maecenas fermentum
-      dui, hendrerit platea metus purus eu arcu elementum, torquent quam fusce tortor rhoncus parturient potenti.</p>
-  </section>
-  <section class="about">
-    <h2>Nuestra Historia</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim, vehicula pulvinar malesuada massa hendrerit
-      quis parturient, primis sociis ligula sollicitudin mattis rhoncus luctus. Dignissim sapien in malesuada platea
-      montes neque curabitur sociis facilisis varius, pellentesque non at feugiat fringilla maecenas posuere justo
-      egestas, purus ligula vivamus nascetur arcu auctor aliquam potenti sodales. Placerat mus leo orci massa inceptos
-      lobortis neque iaculis bibendum, egestas velit fames pharetra suscipit a fusce primis blandit, curabitur eleifend
-      urna senectus turpis taciti purus ultricies. Tempor volutpat sollicitudin nunc imperdiet sapien maecenas fermentum
-      dui, hendrerit platea metus purus eu arcu elementum, torquent quam fusce tortor rhoncus parturient potenti..</p>
-  </section>
-  <section class="about">
-    <h2>Nuestro Equipo</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim, vehicula pulvinar malesuada massa hendrerit
-      quis parturient, primis sociis ligula sollicitudin mattis rhoncus luctus. Dignissim sapien in malesuada platea
-      montes neque curabitur sociis facilisis varius, pellentesque non at feugiat fringilla maecenas posuere justo
-      egestas, purus ligula vivamus nascetur arcu auctor aliquam potenti sodales. Placerat mus leo orci massa inceptos
-      lobortis neque iaculis bibendum, egestas velit fames pharetra suscipit a fusce primis blandit, curabitur eleifend
-      urna senectus turpis taciti purus ultricies. Tempor volutpat sollicitudin nunc imperdiet sapien maecenas fermentum
-      dui, hendrerit platea metus purus eu arcu elementum, torquent quam fusce tortor rhoncus parturient potenti.</p>
-    <p>
-      Praesent justo aptent vitae molestie facilisi varius ligula aenean sed dignissim, penatibus orci senectus semper
-      libero integer natoque himenaeos tincidunt, non est euismod a vulputate aliquet arcu lacus enim. Pellentesque
-      sagittis nec conubia potenti mi velit vulputate ridiculus, torquent eleifend scelerisque id feugiat magnis mus.
-      Consequat tellus mollis aliquam nibh curae vestibulum curabitur, etiam suscipit mus suspendisse leo viverra
-      pretium, erat potenti arcu enim risus sagittis natoque, lobortis pellentesque a libero cursus sociis. Est fames
-      magna turpis malesuada purus velit consequat tincidunt inceptos rhoncus egestas justo orci, duis augue natoque ut
-      maecenas cursus sed leo sagittis placerat metus integer.</p>
-  </section>
-  <section class="about">
-    <h2>Nuestros Valores</h2>
-    <ul>
-      <li>Lorem ipsum dolor sit amet consectetur, adipiscing elit eleifend.</li>
-      <li>Posuere odio ante fermentum, arcu semper torquent nullam, tristique luctus.</li>
-      <li>Leo orci fringilla cubilia viverra, quisque nibh fermentum.</li>
-      <li>Litora ligula ante duis gravida, elementum velit consequat.</li>
-    </ul>
-  </section>
+  <div class="table-container">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+          <th colspan="3">Nosotros</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3" class="info-row">
+            <p>Nuestro colegio es una institución educativa con más de 20 años de experiencia en la formación de jóvenes.</p>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Nuestro Equipo">Nuestro Equipo</td>
+          <td data-label="Nuestra Historia">Nuestra Historia</td>
+          <td data-label="Nuestra Misión">Nuestra Misión</td>
+        </tr>
+        <tr>
+          <td data-label="Nuestro Equipo">
+            Contamos con un equipo altamente capacitado y comprometido con la excelencia.
+          </td>
+          <td data-label="Nuestra Historia">
+            Desde nuestros inicios, hemos trabajado con pasión y determinación.
+          </td>
+          <td data-label="Nuestra Misión">
+            Buscamos brindar soluciones innovadoras y de alta calidad.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- Contenido en formato de columna para pantallas pequeñas -->
+    <div class="mobile-content">
+      <p><strong>Nuestro colegio</strong>: Una institución educativa con más de 20 años de experiencia en la formación de jóvenes.</p>
+      <p><strong>Nuestro Equipo</strong>: Contamos con un equipo altamente capacitado y comprometido con la excelencia.</p>
+      <p><strong>Nuestra Historia</strong>: Desde nuestros inicios, hemos trabajado con pasión y determinación.</p>
+      <p><strong>Nuestra Misión</strong>: Buscamos brindar soluciones innovadoras y de alta calidad.</p>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.about {
+/* Estilos generales */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  min-height: 100vh;
+  background: #f4f7fc;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+  width: 100%;
+  max-width: 1400px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+/* Tabla */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Encabezados */
+.responsive-table th {
+  background: #007bff;
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+/* Celdas */
+.responsive-table td {
+  border: 1px solid #ddd;
+  padding: 18px;
   background: #eef2ff;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #333;
-  text-align: left;
-  /* Alineación a la izquierda en pantallas grandes */
-}
-
-.about p {
   font-size: 1.125rem;
-  line-height: 1.6;
-  color: #555;
 }
 
-.about ul {
-  list-style-type: disc;
-  margin-left: 20px;
+/* Hover */
+.responsive-table tr:hover td {
+  background: #d0e2ff;
+  transition: background 0.3s ease;
 }
 
-.about ul li {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: #555;
+/* Fila con información destacada */
+.info-row {
+  background: #cce5ff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-/* Responsivo */
+/* Estilos para el contenido móvil (sin tabla) */
+.mobile-content {
+  display: none;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .about h2 {
-    font-size: 1.75rem;
-    text-align: center;
-    /* Centrar el título en pantallas medianas */
+  .table-container {
+    width: 100%;
+    padding: 10px;
   }
 
-  .about p,
-  .about ul li {
-    font-size: 1rem;
+  /* Oculta la tabla en pantallas pequeñas */
+  .responsive-table {
+    display: none;
   }
 
-  .about {
-    padding: 15px;
-    margin-bottom: 15px;
+  /* Muestra el contenido en columna para pantallas pequeñas */
+  .mobile-content {
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.6;
   }
 }
 
 @media (max-width: 480px) {
-  .about h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    /* Centrar el título en pantallas pequeñas */
-  }
-
-  .about p,
-  .about ul li {
-    font-size: 0.875rem;
-  }
-
-  .about {
-    padding: 10px;
+  /* En pantallas más pequeñas, ajustar aún más el tamaño de la fuente */
+  .mobile-content {
+    font-size: 1rem;
   }
 }
 </style>

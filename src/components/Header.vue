@@ -17,7 +17,6 @@
         </li>
         <li><a href="#" @click.prevent="$emit('scrollToSection', 'nosotros')">Nosotros</a></li>
         <li><a href="#" @click.prevent="$emit('scrollToSection', 'anuncios')">Eventos</a></li>
-
         <li><a href="#" @click.prevent="$emit('scrollToSection', 'contacto')">Contacto</a></li>
       </ul>
     </nav>

@@ -31,20 +31,24 @@ function scrollTo(sectionName) {
     <br><br><br><br>
     <section ref="inicio"><Inicio /></section>
     <section ref="nosotros"><Nosotros /></section>
-    <!-- <section ref="noticias"><Noticias /></section> -->
     <section ref="anuncios"><Anuncios /></section>
     <section ref="contacto"><Contacto /></section>
-    <Footer />
+    
     
   </main>
+  <Footer />
 </template>
 
 <style scoped>
 main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
 }
 
 </style>
