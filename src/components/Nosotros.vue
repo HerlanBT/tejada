@@ -9,7 +9,13 @@
       <tbody>
         <tr>
           <td colspan="3" class="info-row">
-            <p>Nuestro colegio es una institución educativa con más de 20 años de experiencia en la formación de jóvenes.</p>
+            <p>            lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo earum voluptas exercitationem blanditiis
+            omnis a ullam recusandae nemo enim, fuga magni, tempore molestias, obcaecati ut iure? Totam, aperiam
+            consequatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed officiis vel accusamus libero.
+            Reiciendis debitis, hic sint tempora magnam incidunt blanditiis explicabo repudiandae neque! Odio corporis
+            obcaecati repellendus repellat.</p>
           </td>
         </tr>
         <tr>
@@ -19,23 +25,89 @@
         </tr>
         <tr>
           <td data-label="Nuestro Equipo">
-            Contamos con un equipo altamente capacitado y comprometido con la excelencia.
+            lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo earum voluptas exercitationem blanditiis
+            omnis a ullam recusandae nemo enim, fuga magni, tempore molestias, obcaecati ut iure? Totam, aperiam
+            consequatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed officiis vel accusamus libero.
+            Reiciendis debitis, hic sint tempora magnam incidunt blanditiis explicabo repudiandae neque! Odio corporis
+            obcaecati repellendus repellat.
+
           </td>
           <td data-label="Nuestra Historia">
-            Desde nuestros inicios, hemos trabajado con pasión y determinación.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error dolores laudantium, tempore perferendis
+            soluta magnam reprehenderit corrupti quam nam omnis nulla dicta fugit consequatur sapiente. Deserunt
+            explicabo temporibus hic numquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ipsum ut sequi aliquam. Et aliquam
+            molestias praesentium eos accusantium ad, mollitia quibusdam ratione earum cupiditate dignissimos non
+            exercitationem quasi obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odio explicabo animi. Sit assumenda
+            tempore maiores aut mollitia sequi tempora ex inventore voluptatibus doloribus, asperiores a! Tempore
+            mollitia quia nemo?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi obcaecati necessitatibus quisquam dignissimos
+            nulla asperiores facere quaerat. Doloribus cum quod dolorem atque minima facere, iste ullam incidunt nemo
+            quam voluptate?
           </td>
           <td data-label="Nuestra Misión">
-            Buscamos brindar soluciones innovadoras y de alta calidad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit natus praesentium perferendis
+            nulla! Consequatur dolorem impedit officia modi incidunt quae velit sit maxime perspiciatis, beatae
+            laboriosam cupiditate deleniti earum.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae consequatur inventore facilis. Facere
+            quaerat, cum rerum vel molestiae dolore culpa eaque eius, veniam mollitia cupiditate debitis quam recusandae
+            impedit unde?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis tempore commodi animi maxime autem ipsam
+            incidunt officia eligendi! Laborum, mollitia non ratione voluptates repellat nulla excepturi deserunt iste
+            veritatis cum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laborum totam aperiam expedita laboriosam
+            amet dolore eligendi quos maiores non cupiditate dolorem, a in tempore vel voluptatum distinctio?
+            Accusantium, tenetur?
+
           </td>
         </tr>
       </tbody>
     </table>
     <!-- Contenido en formato de columna para pantallas pequeñas -->
     <div class="mobile-content">
-      <p><strong>Nuestro colegio</strong>: Una institución educativa con más de 20 años de experiencia en la formación de jóvenes.</p>
-      <p><strong>Nuestro Equipo</strong>: Contamos con un equipo altamente capacitado y comprometido con la excelencia.</p>
-      <p><strong>Nuestra Historia</strong>: Desde nuestros inicios, hemos trabajado con pasión y determinación.</p>
-      <p><strong>Nuestra Misión</strong>: Buscamos brindar soluciones innovadoras y de alta calidad.</p>
+      <p><strong>Nuestro colegio</strong>:             lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo earum voluptas exercitationem blanditiis
+            omnis a ullam recusandae nemo enim, fuga magni, tempore molestias, obcaecati ut iure? Totam, aperiam
+            consequatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed officiis vel accusamus libero.
+            Reiciendis debitis, hic sint tempora magnam incidunt blanditiis explicabo repudiandae neque! Odio corporis
+            obcaecati repellendus repellat.
+        de jóvenes.</p>
+      <p><strong>Nuestro Equipo</strong>:             lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo earum voluptas exercitationem blanditiis
+            omnis a ullam recusandae nemo enim, fuga magni, tempore molestias, obcaecati ut iure? Totam, aperiam
+            consequatur?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sed officiis vel accusamus libero.
+            Reiciendis debitis, hic sint tempora magnam incidunt blanditiis explicabo repudiandae neque! Odio corporis
+            obcaecati repellendus repellat.
+      </p>
+      <p><strong>Nuestra Historia</strong>:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error dolores laudantium, tempore perferendis
+            soluta magnam reprehenderit corrupti quam nam omnis nulla dicta fugit consequatur sapiente. Deserunt
+            explicabo temporibus hic numquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ipsum ut sequi aliquam. Et aliquam
+            molestias praesentium eos accusantium ad, mollitia quibusdam ratione earum cupiditate dignissimos non
+            exercitationem quasi obcaecati.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates odio explicabo animi. Sit assumenda
+            tempore maiores aut mollitia sequi tempora ex inventore voluptatibus doloribus, asperiores a! Tempore
+            mollitia quia nemo?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi obcaecati necessitatibus quisquam dignissimos
+            nulla asperiores facere quaerat. Doloribus cum quod dolorem atque minima facere, iste ullam incidunt nemo
+            quam voluptate?</p>
+      <p><strong>Nuestra Misión</strong>:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum reprehenderit natus praesentium perferendis
+            nulla! Consequatur dolorem impedit officia modi incidunt quae velit sit maxime perspiciatis, beatae
+            laboriosam cupiditate deleniti earum.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae consequatur inventore facilis. Facere
+            quaerat, cum rerum vel molestiae dolore culpa eaque eius, veniam mollitia cupiditate debitis quam recusandae
+            impedit unde?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis tempore commodi animi maxime autem ipsam
+            incidunt officia eligendi! Laborum, mollitia non ratione voluptates repellat nulla excepturi deserunt iste
+            veritatis cum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laborum totam aperiam expedita laboriosam
+            amet dolore eligendi quos maiores non cupiditate dolorem, a in tempore vel voluptatum distinctio?
+            Accusantium, tenetur?</p>
     </div>
   </div>
 </template>
@@ -126,6 +198,7 @@
 }
 
 @media (max-width: 480px) {
+
   /* En pantallas más pequeñas, ajustar aún más el tamaño de la fuente */
   .mobile-content {
     font-size: 1rem;
