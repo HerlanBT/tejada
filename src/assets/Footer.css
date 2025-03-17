@@ -17,7 +17,7 @@
 footer {
     background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000); /* Mejor contraste */
     color: white;
-    padding: 40px 20px;
+    padding: 20px 20px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
