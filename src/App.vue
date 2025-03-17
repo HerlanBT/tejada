@@ -1,5 +1,5 @@
 <script setup>
-
+import { Analytics } from "@vercel/analytics/react"
 import Main from './views/Main.vue';
 </script>
 <template>
