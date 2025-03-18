@@ -11,7 +11,9 @@
                 <a href="tel:+1234567890">123-456-7890</a>
             </p>
             <p>
-                <a href="mailto:info@tejadatriangular.com">info@tejadatriangular.com</a>
+                <a href="mailto:info@tejadatriangular.com">tejadat2025@outlook.com</a>
+                <a href="mailto:info@tejadatriangular.com">unidadeducativatejadatriangula@gmail.com
+                </a>
             </p>
         </div>
         <div class="footer-social">
