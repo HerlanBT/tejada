@@ -12,6 +12,9 @@
             </p>
             <p>
                 <a href="mailto:info@tejadatriangular.com">tejadat2025@outlook.com</a>
+             
+            </p>
+            <p>
                 <a href="mailto:info@tejadatriangular.com">unidadeducativatejadatriangula@gmail.com
                 </a>
             </p>
