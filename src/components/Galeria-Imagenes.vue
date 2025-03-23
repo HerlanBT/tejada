@@ -91,80 +91,18 @@
   </script>
   
   <style scoped>
-  .gallery-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding-top: 60px; /* Deja espacio para el Header */
-  }
-  
-  main {
-    flex: 1;
-    padding: 20px;
-    padding-top: 80px;
-  }
-  
-  .category-buttons {
-    margin-bottom: 15px;
-  }
-  
-  .category-buttons button {
-    background: #2b3ee9;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-  
-  .category-buttons button.active,
-  .category-buttons button:hover {
-    background: #8B0000;
-  }
-  
-  /* Contenedor de la galería */
-  .gallery-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  /* Slider de imágenes */
-  .main-image {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  .image-slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide-image {
-    width: 100%;
-    flex-shrink: 0;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  /* Navegación */
+  /* Contenedor de navegación */
   .image-navigation {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: space-between; /* Alinea los botones en los lados */
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Evita que bloquee la interacción con la imagen */
   }
   
+  /* Botones de navegación */
   .nav-btn {
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -173,6 +111,7 @@
     padding: 10px;
     cursor: pointer;
     transition: 0.3s;
+    pointer-events: auto; /* Permite hacer clic */
   }
   
   .nav-btn:hover {
@@ -180,40 +119,21 @@
     color: black;
   }
   
-  /* Mensaje si no hay imágenes */
-  .no-images {
-    font-size: 18px;
-    color: red;
-    margin-top: 20px;
-  }
-  
-  /* Estilos Responsivos */
+  /* Estilos responsivos para móviles */
   @media (max-width: 768px) {
-    .slide-image {
-      max-height: 300px;
+    .image-navigation {
+      position: relative;
+      top: auto;
+      width: 100%;
+      transform: none;
+      justify-content: center; /* Centra los botones debajo de la imagen */
+      margin-top: 10px;
     }
   
     .nav-btn {
       font-size: 20px;
       padding: 8px;
-    }
-  
-    .category-buttons button {
-      padding: 8px 12px;
-      margin: 4px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .category-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .category-buttons button {
-      width: 100%;
-      text-align: center;
+      margin: 0 10px;
     }
   }
   </style>
