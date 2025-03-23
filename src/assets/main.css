@@ -1,22 +1,59 @@
-/* Estilos generales para toda la aplicación */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilos generales del main */
+main {
+  padding-top: 80px; /* Espacio para evitar que el header cubra contenido */
+  padding-bottom: 80px; /* Espacio para el footer */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Secciones */
+section {
+  padding: 50px 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Ocultar secciones y mostrar correctamente */
+section:not(:first-child) {
+  display: block;
+}
+
+/* Botones */
+button {
+  background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000);
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #8B0000, #2b3ee9, #1a1a1a);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 30px 15px;
   }
-  
-  @media screen and (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
+
+  button {
+    width: 80%;
+    padding: 12px 20px;
   }
-  
-  @media screen and (max-width: 480px) {
-    h1 {
-      font-size: 18px;
-    }
-  }
-  
+}

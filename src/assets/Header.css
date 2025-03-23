@@ -2,7 +2,8 @@
 .header {
   background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000);
   color: white;
-  padding: 20px 20px; /* Ajusta el padding para evitar cortes */
+  min-height: 80px; /* Altura mínima */
+  padding: 20px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,8 +14,7 @@
   top: 0;
   left: 0;
   z-index: 100;
-  animation: slideDown 1s ease-out;
-  box-sizing: border-box; /* Asegura que no se corte el contenido */
+  box-sizing: border-box;
 }
 
 /* Logo y título */
@@ -126,5 +126,13 @@ nav.active .nav-links {
 
   nav.active .nav-links {
      display: flex; /* Muestra el menú cuando el ícono de hamburguesa está activado */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
   }
 }

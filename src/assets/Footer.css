@@ -15,19 +15,21 @@
 
 /* Estilos generales del footer */
 footer {
-    background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000); /* Mejor contraste */
+    background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000);
     color: white;
+    min-height: 80px; /* Misma altura mínima que el header */
     padding: 20px 20px;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    animation: fadeIn 1s ease-out;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-}
+    box-sizing: border-box;
+  }
+  
 
 /* Logo y nombre de la institución */
 .footer-logo {
@@ -175,3 +177,10 @@ footer {
         font-size: 16px;
     }
 }
+@media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  }

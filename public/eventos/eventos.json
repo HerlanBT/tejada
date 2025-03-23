@@ -3,6 +3,12 @@
       "id": "carnavales-2025",
       "nombre": "Carnavales 2025",
       "imagen": "/images/carnavales-2025.jpg"
+    },
+    
+    {
+      "id": "diadelpadre-2025",
+      "nombre": "Día del Padre",
+      "imagen": "/images/diadelpadre-2025.jpg"
     }
     
   ]
