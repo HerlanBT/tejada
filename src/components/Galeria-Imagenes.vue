@@ -87,13 +87,14 @@ cargarImagenes("Biología");
 .gallery-wrapper {
     position: relative;
     margin: 20px auto;
-    max-width: 1000px;
+    max-width: 100%;
+    padding: 10px;
 }
 
 /* Botones de categorías */
 .category-buttons {
     display: flex;
-    flex-wrap: wrap; /* Para que los botones se apilen en pantallas pequeñas */
+    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
 }
@@ -106,7 +107,7 @@ cargarImagenes("Biología");
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    white-space: nowrap; /* Evita que el texto se divida */
+    white-space: nowrap;
 }
 
 .category-buttons button.active {
@@ -126,6 +127,7 @@ cargarImagenes("Biología");
 
 .main-image {
     position: relative;
+    width: 100%;
 }
 
 .image-slider {
@@ -136,8 +138,8 @@ cargarImagenes("Biología");
 .slide-image {
     width: 100%;
     object-fit: cover;
-    height: 500px;
-    /* Ajusta según el tamaño que desees */
+    max-height: 500px;
+    /* Ajuste de la altura de las imágenes */
 }
 
 /* Navegación */
@@ -169,15 +171,6 @@ cargarImagenes("Biología");
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
-    .gallery-wrapper {
-        padding: 10px;
-    }
-
-    .category-buttons {
-        flex-direction: column;
-        margin-bottom: 15px;
-    }
-
     .category-buttons button {
         font-size: 14px;
         padding: 8px 16px;
@@ -185,8 +178,12 @@ cargarImagenes("Biología");
     }
 
     .main-image {
-        height: 300px;
-        /* Ajusta la altura para móviles */
+        height: auto; /* Ajusta la altura para móviles */
+    }
+
+    .image-slider {
+        display: block;
+        transition: none;
     }
 
     .image-navigation {
@@ -199,6 +196,25 @@ cargarImagenes("Biología");
     .nav-btn {
         font-size: 20px;
         padding: 8px;
+    }
+}
+
+/* Estilos para pantallas grandes (PC) */
+@media (min-width: 769px) {
+    .main-image {
+        height: 500px;
+    }
+
+    .image-navigation {
+        position: absolute;
+        top: 50%;
+        margin-top: 0;
+        justify-content: space-between;
+    }
+
+    .nav-btn {
+        font-size: 24px;
+        padding: 10px;
     }
 }
 </style>
