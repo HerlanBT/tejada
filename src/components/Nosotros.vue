@@ -17,7 +17,7 @@ import Footer from './Footer.vue';
           <tr>
             <td colspan="3" class="info-row">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus...
+                Estamos Trabajando en ello, gracias por la espera...
               </p>
             </td>
           </tr>
@@ -27,16 +27,16 @@ import Footer from './Footer.vue';
             <td>Nuestra Misión</td>
           </tr>
           <tr>
-            <td>Lorem ipsum dolor sit amet...</td>
-            <td>Lorem ipsum dolor sit amet...</td>
-            <td>Lorem ipsum dolor sit amet...</td>
+            <td>Estamos Trabajando en ello...</td>
+            <td>Estamos Trabajando en ello...</td>
+            <td>Estamos Trabajando en ello...</td>
           </tr>
         </tbody>
       </table>
       <div class="mobile-content">
-        <p><strong>Nuestro Equipo:</strong> Lorem ipsum dolor sit amet...</p>
-        <p><strong>Nuestra Historia:</strong> Lorem ipsum dolor sit amet...</p>
-        <p><strong>Nuestra Misión:</strong> Lorem ipsum dolor sit amet...</p>
+        <p><strong>Nuestro Equipo:</strong> Estamos Trabajando en ello...</p>
+        <p><strong>Nuestra Historia:</strong> Estamos Trabajando en ello...</p>
+        <p><strong>Nuestra Misión:</strong> Estamos Trabajando en ello...</p>
       </div>
     </div>
   </div>
