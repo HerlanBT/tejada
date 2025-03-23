@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aacassandra/vue3-progressbar": "^1.0.3",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/vite": "^4.0.14",
     "@vercel/analytics": "^1.5.0",
@@ -16,6 +17,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "vue": "^3.5.13",
+    "vue-progressbar": "^0.7.5",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
