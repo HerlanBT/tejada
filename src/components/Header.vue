@@ -14,7 +14,7 @@
     <nav :class="{ 'active': isMenuOpen }">
       <ul class="nav-links" v-if="isInicio">
         <li><a href="#" @click.prevent="goToHome">Inicio</a></li>
-        <li><a href="#" @click.prevent="$irNosotros">Nosotros</a></li>
+        <li><a href="#" @click.prevent="irNosotros">Nosotros</a></li>
         <li><a href="#" @click.prevent="$emit('scrollToSection', 'anuncios')">Eventos</a></li>
         <li><a href="#" @click.prevent="$emit('scrollToSection', 'contacto')">Contacto</a></li>
         <li><a href="#" @click.prevent="irAGaleria">Galería</a></li>
@@ -53,7 +53,7 @@ const irAGaleria = () => {
   router.push("/galeria");
 };
 const irNosotros = () => {
-  router.push("/nosotros");
+  router.push('/nosotros');
 };
 </script>
 

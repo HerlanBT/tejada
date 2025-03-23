@@ -1,7 +1,7 @@
 <template>
   <main>
     <Header @scrollToSection="scrollTo" />
-    <br><br><br><br>
+   
     <section ref="inicio">
       <Inicio />
     </section>
