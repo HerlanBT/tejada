@@ -1,8 +1,8 @@
 <template>
     <Header />
-
+    <br>
+    <br>
     <main>
-        <BR></BR>
         <div class="gallery-wrapper">
             <!-- Botones para seleccionar categorías -->
             <div class="category-buttons">
@@ -37,7 +37,6 @@
 
     <Footer />
 </template>
-
 
 <script setup>
 import { ref } from 'vue';
@@ -83,10 +82,7 @@ const scrollRight = () => {
 cargarImagenes("Biología");
 </script>
 
-
 <style scoped>
-<style scoped>
-
 /* Contenedor general */
 .gallery-wrapper {
     position: relative;
@@ -97,18 +93,20 @@ cargarImagenes("Biología");
 /* Botones de categorías */
 .category-buttons {
     display: flex;
+    flex-wrap: wrap; /* Para que los botones se apilen en pantallas pequeñas */
     justify-content: center;
     margin-bottom: 20px;
 }
 
 .category-buttons button {
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 5px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita que el texto se divida */
 }
 
 .category-buttons button.active {
@@ -171,6 +169,21 @@ cargarImagenes("Biología");
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    .gallery-wrapper {
+        padding: 10px;
+    }
+
+    .category-buttons {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .category-buttons button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 5px 0;
+    }
+
     .main-image {
         height: 300px;
         /* Ajusta la altura para móviles */
