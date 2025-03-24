@@ -60,8 +60,9 @@ const irNosotros = () => {
 <style src="../assets/Header.css"></style>
 
 <style scoped>
+
 .back-button {
-  background-color: #ff4b2b;
+  background-color: #04b8ff;
   color: white;
   font-size: 16px;
   padding: 10px 20px;

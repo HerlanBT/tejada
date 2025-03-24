@@ -24,7 +24,7 @@ section:not(:first-child) {
 
 /* Botones */
 button {
-  background: linear-gradient(135deg, #1a1a1a, #2b3ee9, #8B0000);
+  background: linear-gradient(135deg, #d3f7fc, #021bff, #f2f4f5);
   color: white;
   border: none;
   padding: 15px 25px;
@@ -37,7 +37,8 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #8B0000, #2b3ee9, #1a1a1a);
+  background: linear-gradient(135deg, #fc2e2e, #ffd000, #fc2e2e);
+  color: black;
   transform: scale(1.05);
 }
 
