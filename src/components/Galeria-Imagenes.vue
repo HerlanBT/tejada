@@ -97,6 +97,7 @@ cargarImagenes("Biología");
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+
 }
 
 .category-buttons button {
@@ -108,15 +109,25 @@ cargarImagenes("Biología");
     font-size: 16px;
     transition: background-color 0.3s ease;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .category-buttons button.active {
-    background-color: #42b883;
+
+    background-color:cornflowerblue;
     color: white;
+    border: 1px solid cornflowerblue;
 }
 
 .category-buttons button:hover {
-    background-color: #ddd;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+
 }
 
 /* Estilos de la galería */

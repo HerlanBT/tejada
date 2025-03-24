@@ -22,7 +22,7 @@ section:not(:first-child) {
   display: block;
 }
 
-/* Botones */
+/* Botones
 button {
   background: linear-gradient(135deg, #d3f7fc, #021bff, #f2f4f5);
   color: white;
@@ -44,7 +44,7 @@ button:hover {
 
 button:active {
   transform: scale(0.95);
-}
+} */
 
 /* Responsividad */
 @media (max-width: 768px) {
@@ -53,8 +53,8 @@ button:active {
     padding: 30px 15px;
   }
 
-  button {
+  /* button {
     width: 80%;
     padding: 12px 20px;
-  }
+  } */
 }
