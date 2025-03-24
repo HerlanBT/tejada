@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <img src="/logo-colegio.png" alt="Logo Colegio">
+      <a href="#" @click.prevent="goToHome"><img src="/logo-colegio.png" alt="Logo Colegio"></a>
       <h1>Unidad Educativa Tejada Triangular</h1>
     </div>
 

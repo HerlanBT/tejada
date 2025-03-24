@@ -7,8 +7,16 @@
     {
         "id": "video2",
         "titulo": "Día del Padre 2025 Entrevistas a los Papás",
-        "iframe":"<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@tejadatriangular_colegio/video/7485092622047005957\" data-video-id=\"7485092622047005957\" style=\"max-width: 605px;min-width: 325px;\" > <section> <a target=\"_blank\" title=\"@tejadatriangular_colegio\" href=\"https://www.tiktok.com/@tejadatriangular_colegio?refer=embed\">@tejadatriangular_colegio</a> <p>Día del padre en la U.E. Tejada Triangular #UnidadEducativaTejadaTriangular 🏫 #CelebrandoEnTejadaTriangular 🎤 #DíaDelPadreTejadaTriangular 🎥 #DíaDelPadre 🧡 #FelizDíaPapá 🎉 #GraciasPapá 👨‍👧‍👦 #PapáTeAmo ❤️ #EresElMejorPapá 🏆 #PapáEresMiHéroe 🦸‍♂️ #DíaDelPadre2025 🎊 #CelebrandoATuLado 🎶 #PadreEjemplar 💙 #PapáSiempreContigo 🤗 #ParaTi (#FYP) 🔥 #Viral 🎶 #TikTokFamoso 📲 #Trending 🎬</p> <a target=\"_blank\" title=\"♬ sonido original  - tejadatriangular_colegio\" href=\"https://www.tiktok.com/music/sonido-original-tejadatriangularcolegio-7485097178223921926?refer=embed\">♬ sonido original  - tejadatriangular_colegio</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>"
+        "iframe": "<iframe width=\"415\" height=\"738\" src=\"https://www.youtube.com/embed/CpK6lAbGPpI\" title=\"Día del padre en la U.E. Tejada Triangular\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+    },
+    {
+        "id": "video3",
+        "titulo": "Baile de la danza tinku de los estudiantes de 4to de Secundaria",
+        "iframe": "<iframe src=\"https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61573393153822%2Fvideos%2F648366368122392%2F&show_text=true&width=560&t=0\" width=\"560\" height=\"429\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share\" allowFullScreen=\"true\"></iframe>"
+    },
+    {
+        "id": "tiktok1",
+        "titulo": "Día del Padre 2025",
+        "iframe": "<blockquote class=\"tiktok-embed\" cite=\"https://www.tiktok.com/@tejadatriangular_colegio\" data-unique-id=\"tejadatriangular_colegio\" data-embed-type=\"creator\" style=\"max-width: 780px; min-width: 288px;\" > <section> <a target=\"_blank\" href=\"https://www.tiktok.com/@tejadatriangular_colegio?refer=creator_embed\">@tejadatriangular_colegio</a> </section> </blockquote> <script async src=\"https://www.tiktok.com/embed.js\"></script>"
     }
-        
-        
 ]
