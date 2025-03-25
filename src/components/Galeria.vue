@@ -11,11 +11,20 @@
     <div v-else-if="error" class="error">⚠️ Error al cargar los videos</div>
 
     <div v-else class="video-grid">
-      <div v-for="video in videos" :key="video.id" class="video-item">
-        <h3 class="video-title">{{ video.titulo }}</h3> <!-- Muestra el título -->
-        <div class="iframe-container" v-html="video.iframe"></div>
-      </div>
-    </div>
+  <div v-for="video in videos" :key="video.id" class="video-item">
+    <h3 class="video-title">{{ video.titulo }}</h3>
+    
+    <!-- Si el video tiene iframe, renderizarlo con v-html -->
+    <div v-if="video.iframe" class="iframe-container" v-html="video.iframe"></div>
+    
+    <!-- Si el video tiene una URL (mp4, por ejemplo), mostrar con etiqueta <video> -->
+    <video v-else-if="video.url" controls class="video-player">
+      <source :src="video.url" type="video/mp4">
+      Tu navegador no soporta el elemento de video.
+    </video>
+  </div>
+</div>
+
   </section>
   <Footer />
 </template>
@@ -69,6 +78,12 @@ h2 {
   color: #222;
   margin-bottom: 20px;
   font-weight: bold;
+}
+.video-player {
+  width: 560px;
+  height: 429px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .video-grid {
