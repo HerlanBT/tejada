@@ -9,6 +9,11 @@
       "id": "diadelpadre-2025",
       "nombre": "Día del Padre",
       "imagen": "/images/diadelpadre-2025.jpg"
+    },
+    {
+      "id":"diadelMar-2025",
+      "nombre":"Día del Mar",
+      "imagen":"/images/23-Marzo-2025.jpg"
     }
     
   ]
