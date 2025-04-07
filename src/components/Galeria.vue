@@ -44,7 +44,6 @@ const error = ref(null);
 const fetchVideos = async () => {
   try {
     const response = await fetch(`/videos/${categoria.value}.json`);
-    alert(categoria.value);
     if (!response.ok) throw new Error("Error al obtener videos");
     videos.value = await response.json();
   } catch (err) {
