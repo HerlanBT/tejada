@@ -1,10 +1,10 @@
 <template>
   <div class="contenido-principal">
-    <!-- COLUMNA IZQUIERDA: TEXTO Y REDES -->
+    <!-- Columna izquierda: Info y redes -->
     <div class="info-redes">
       <h1 class="titulo">UNIDAD EDUCATIVA TEJADA TRIANGULAR</h1>
       <div class="bloque-redes">
-        <h2>Nuestras Redes Sociales</h2>
+        <h2><strong>Nuestras Redes Sociales</strong></h2>
         <div class="redes-sociales">
           <a href="https://www.facebook.com/profile.php?id=61573393153822" target="_blank" class="icono"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/tejadatriangular/" target="_blank" class="icono"><i class="fab fa-instagram"></i></a>
@@ -12,19 +12,19 @@
           <a href="https://www.tiktok.com/@tejadatriangular_colegio?_t=ZM-8umsG7lOgCc&_r=1" target="_blank" class="icono"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
+      <div class="logo">
+        <img src="/public/LogoTejada.png" alt="Logo" />
+      </div>
     </div>
 
-    <!-- COLUMNA DERECHA: GALERÍA -->
+    <!-- Columna derecha: Galería -->
     <div class="gallery-container" :style="{ backgroundImage: `url(${imagenes[activeIndex]?.url})` }">
       <div class="gallery-blur"></div>
-
       <div class="gallery" ref="gallery">
-        <div v-for="(imagen, index) in imagenes" :key="index" class="gallery-item"
-          :class="{ active: index === activeIndex }">
+        <div v-for="(imagen, index) in imagenes" :key="index" class="gallery-item" :class="{ active: index === activeIndex }">
           <img :src="imagen.url" :alt="'Imagen ' + (index + 1)" />
         </div>
       </div>
-
       <div class="nav-buttons">
         <button @click="scrollLeft" class="nav-btn left">‹</button>
         <button @click="scrollRight" class="nav-btn right">›</button>
@@ -34,17 +34,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted } from 'vue';
 
 const imagenes = ref([]);
-const activeIndex = ref(0);  // Índice de la imagen activa
+const activeIndex = ref(0);
 
 const cargarImagenes = async () => {
   try {
-    const response = await fetch("/images/inicio/galeria.json");
-    imagenes.value = await response.json();
-  } catch (error) {
-    console.error("Error al cargar las imágenes:", error);
+    const res = await fetch('/images/inicio/galeria.json');
+    imagenes.value = await res.json();
+  } catch (e) {
+    console.error('Error al cargar imágenes:', e);
   }
 };
 
@@ -69,47 +69,59 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Estilos Generales */
-.titulo {
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 20px 0;
-  color: #333;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Contenedor Principal */
+/* Contenedor general */
 .contenido-principal {
   display: flex;
-  flex-wrap: wrap; /* Permite que en pantallas pequeñas se apilen */
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
   padding: 40px;
-  gap: 40px;
+  gap: 30px;
 }
 
+/* Columna de texto y redes */
 .info-redes {
-  flex: 1;
-  max-width: 500px;
-  padding: 20px;
-}
-
-.gallery-container {
-  position: relative;
-  display: flex;
-  align-items: center;
+  display: block;
   justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  height: 500px; /* Ajusta altura base */
-  max-width: 700px; /* Ajusta tamaño máximo */
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  background-size: cover;
-  background-position: center;
+  
+  max-width: 350px;
+  padding: 10px;
 }
 
-/* Estilo de las redes sociales */
+.titulo {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ffffff;
+  background-color: #4c00ff;
+  border-radius:12px ;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.logo img {
+  max-width: 250px; /* o el tamaño que prefieras */
+  width: 100%;
+  height: auto;
+}
+.bloque-redes {
+  background-color: pink;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.bloque-redes:hover {
+  background-color: #87cefa;
+}
+
+.bloque-redes h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
 .redes-sociales {
   display: flex;
   justify-content: center;
@@ -117,8 +129,8 @@ onMounted(() => {
 }
 
 .icono {
-  color: rgb(1, 1, 87);
-  font-size: 3rem;
+  color: #010157;
+  font-size: 2rem;
   transition: transform 0.3s ease;
 }
 
@@ -127,29 +139,36 @@ onMounted(() => {
   color: red;
 }
 
-/* Estilo de la galería */
+/* Columna de galería */
+.gallery-container {
+  flex: 1 1 65%;
+  position: relative;
+  height: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
 .gallery {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  padding: 20px;
   width: 100%;
   height: 100%;
   z-index: 2;
 }
 
 .gallery-item {
-  min-width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
+  min-width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .gallery-item.active {
@@ -159,11 +178,11 @@ onMounted(() => {
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 12px;
 }
 
-/* Botones de navegación */
+/* Botones navegación */
 .nav-buttons {
   position: absolute;
   bottom: 20px;
@@ -178,21 +197,19 @@ onMounted(() => {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  cursor: pointer;
   padding: 10px;
   font-size: 24px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .nav-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Efecto de desenfoque en la galería */
+/* Desenfoque galería */
 .gallery-blur {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(15px);
@@ -200,46 +217,30 @@ onMounted(() => {
   z-index: 1;
 }
 
-/* Media Queries para hacer la página responsive */
-
-/* En pantallas medianas */
+/* Responsive */
 @media (max-width: 768px) {
-  .contenido-principal {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-redes, .gallery-container {
-    max-width: 100%;
-  }
-
-  .gallery-container {
-    height: 400px;
-  }
-
-  .nav-buttons {
-    bottom: 10px;
-  }
-
-  .nav-btn {
-    padding: 8px;
-    font-size: 20px;
-  }
+.contenido-principal{
+  justify-content: center;
+  display: block;
+}
 }
 
-/* En pantallas pequeñas (móviles) */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .gallery-container {
-    height: 350px;
-  }
-
-  .nav-buttons {
-    bottom: 5px;
+    height: 300px;
   }
 
   .nav-btn {
-    padding: 6px;
     font-size: 18px;
+    padding: 6px;
   }
 }
+.gallery-item {
+  z-index: 3;
+}
+
+.gallery-blur {
+  z-index: 1;
+}
+
 </style>

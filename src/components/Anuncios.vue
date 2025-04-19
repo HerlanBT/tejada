@@ -1,7 +1,7 @@
 <template>
   <section class="advertisements">
     <h2>🎉 Eventos</h2>
-    <div class="event-slider">
+    <div class="event-slider" ref="slider">
       <div class="event-buttons">
         <div v-for="evento in eventos" :key="evento.id" class="event-card">
           <div class="image-container">
@@ -38,6 +38,39 @@ onMounted(cargarEventos);
 const irAGaleria = (eventoId) => {
   router.push(`/galeria/${eventoId}`);
 };
+
+// Habilitar desplazamiento con el ratón
+const slider = ref(null);
+
+onMounted(() => {
+  const sliderElement = slider.value;
+
+  let isMouseDown = false;
+  let startX;
+  let scrollLeft;
+
+  sliderElement.addEventListener("mousedown", (e) => {
+    isMouseDown = true;
+    startX = e.pageX - sliderElement.offsetLeft;
+    scrollLeft = sliderElement.scrollLeft;
+  });
+
+  sliderElement.addEventListener("mouseleave", () => {
+    isMouseDown = false;
+  });
+
+  sliderElement.addEventListener("mouseup", () => {
+    isMouseDown = false;
+  });
+
+  sliderElement.addEventListener("mousemove", (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - sliderElement.offsetLeft;
+    const walk = (x - startX) * 2; // Ajustar la velocidad del desplazamiento
+    sliderElement.scrollLeft = scrollLeft - walk;
+  });
+});
 </script>
 
 <style scoped>
@@ -60,11 +93,18 @@ h2 {
   white-space: nowrap;
   padding: 10px;
   scroll-snap-type: x mandatory;
+  cursor: grab; /* Cambiar el cursor para indicar que se puede arrastrar */
+}
+
+.event-slider:active {
+  cursor: grabbing; /* Cambiar el cursor cuando el contenedor está siendo arrastrado */
 }
 
 .event-buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: nowrap; /* No permite que los elementos se acomoden en varias líneas */
+  justify-content: start; /* Alineación de los elementos de izquierda a derecha */
 }
 
 /* Cada evento ocupa un espacio fijo */
@@ -129,8 +169,8 @@ h2 {
   }
 
   .event-buttons {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap; /* Aseguramos que los eventos estén en fila horizontal */
+    justify-content: start; /* Mantener los eventos alineados horizontalmente */
   }
 
   .image-container {
