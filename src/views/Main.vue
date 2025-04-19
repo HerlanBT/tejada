@@ -2,25 +2,29 @@
   <main>
     <Header @scrollToSection="scrollTo" />
 
-    <section ref="inicio">
+    <section ref="inicio" class="inicio">
       <Inicio />
     </section>
 
-    <section ref="galeria" class="seccion-con-fondo galeria">
-      <button class="boton-seccion" @click="irAGaleria">Galería</button>
-    </section>
+    <div class="grid-secciones">
+      <section ref="galeria" class="seccion-con-fondo galeria">
+        <button class="boton-seccion" @click="irAGaleria">Galería</button>
+      </section>
 
-    <section ref="nosotros" class="seccion-con-fondo nosotros">
-      <button class="boton-seccion" @click="irNosotros">Nosotros</button>
-    </section>
+      <section ref="nosotros" class="seccion-con-fondo nosotros">
+        <button class="boton-seccion" @click="irNosotros">Nosotros</button>
+      </section>
 
-    <section ref="anuncios">
-      <Noticias />
-    </section>
+      <!-- Puedes agregar más secciones aquí si deseas completar el 2x2 -->
+      <section class="seccion-con-fondo adicional" ref="anuncios">
+        <Noticias />
+      </section>
 
-    <section ref="contacto">
-      <Contacto />
-    </section>
+      <section class="seccion-con-fondo adicional" ref="contacto">
+        <Contacto />
+      </section>
+    </div>
+
   </main>
 
   <Footer />
@@ -60,6 +64,50 @@ const irNosotros = () => {
 </script>
 
 <style scoped>
+/* Espacio mayor para la sección de Inicio */
+/* .inicio {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* Estilo para la cuadrícula 2x2 */
+.grid-secciones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+/* Reutilizamos estilos existentes */
+.seccion-con-fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.galeria {
+  background-image: url('../assets/galeria.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nosotros {
+  background-image: url('../assets/nosotros.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Secciones adicionales si agregas más */
+.adicional {
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
 /* ✅ Fondo con imagen para secciones */
 .seccion-con-fondo {
   display: flex;

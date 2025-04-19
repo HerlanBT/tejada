@@ -1,32 +1,40 @@
 <template>
-  <div>
-    <h1>UNIDAD EDUCATIVA TEJADA TRIANGULAR</h1>
-  </div>
-  <div 
-    class="gallery-container" 
-    :style="{ backgroundImage: `url(${imagenes[activeIndex]?.url})` }"
-  >
-    <div class="gallery-blur"></div> <!-- Capa difuminada -->
-    
-    <div class="gallery" ref="gallery">
-      <div 
-        v-for="(imagen, index) in imagenes" 
-        :key="index" 
-        class="gallery-item" 
-        :class="{ active: index === activeIndex }">
-        <img :src="imagen.url" :alt="'Imagen ' + (index + 1)" />
+  <div class="contenido-principal">
+    <!-- COLUMNA IZQUIERDA: TEXTO Y REDES -->
+    <div class="info-redes">
+      <h1 class="titulo">UNIDAD EDUCATIVA TEJADA TRIANGULAR</h1>
+      <div class="bloque-redes">
+        <h2>Nuestras Redes Sociales</h2>
+        <div class="redes-sociales">
+          <a href="https://www.facebook.com/profile.php?id=61573393153822" target="_blank" class="icono"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tejadatriangular/" target="_blank" class="icono"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@tejadatriangularunidadeducativ?si=9Y611migO1nTM1z2" target="_blank" class="icono"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@tejadatriangular_colegio?_t=ZM-8umsG7lOgCc&_r=1" target="_blank" class="icono"><i class="fab fa-tiktok"></i></a>
+        </div>
       </div>
     </div>
-    
-    <div class="nav-buttons">
-      <button @click="scrollLeft" class="nav-btn left">‹</button>
-      <button @click="scrollRight" class="nav-btn right">›</button>
+
+    <!-- COLUMNA DERECHA: GALERÍA -->
+    <div class="gallery-container" :style="{ backgroundImage: `url(${imagenes[activeIndex]?.url})` }">
+      <div class="gallery-blur"></div>
+
+      <div class="gallery" ref="gallery">
+        <div v-for="(imagen, index) in imagenes" :key="index" class="gallery-item"
+          :class="{ active: index === activeIndex }">
+          <img :src="imagen.url" :alt="'Imagen ' + (index + 1)" />
+        </div>
+      </div>
+
+      <div class="nav-buttons">
+        <button @click="scrollLeft" class="nav-btn left">‹</button>
+        <button @click="scrollRight" class="nav-btn right">›</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 
 const imagenes = ref([]);
 const activeIndex = ref(0);  // Índice de la imagen activa
@@ -61,6 +69,31 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Estilos Generales */
+.titulo {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor Principal */
+.contenido-principal {
+  display: flex;
+  flex-wrap: wrap; /* Permite que en pantallas pequeñas se apilen */
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+.info-redes {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+}
+
 .gallery-container {
   position: relative;
   display: flex;
@@ -68,26 +101,33 @@ onMounted(() => {
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  max-width: 100vw;
-  margin: auto;
+  height: 500px; /* Ajusta altura base */
+  max-width: 700px; /* Ajusta tamaño máximo */
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  height: 720px;
   background-size: cover;
   background-position: center;
 }
 
-.gallery-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(15px);
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+/* Estilo de las redes sociales */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
+.icono {
+  color: rgb(1, 1, 87);
+  font-size: 3rem;
+  transition: transform 0.3s ease;
+}
+
+.icono:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+/* Estilo de la galería */
 .gallery {
   position: relative;
   display: flex;
@@ -110,7 +150,6 @@ onMounted(() => {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
 }
 
 .gallery-item.active {
@@ -124,6 +163,7 @@ onMounted(() => {
   border-radius: 12px;
 }
 
+/* Botones de navegación */
 .nav-buttons {
   position: absolute;
   bottom: 20px;
@@ -148,13 +188,33 @@ onMounted(() => {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Efecto de desenfoque en la galería */
+.gallery-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Media Queries para hacer la página responsive */
+
+/* En pantallas medianas */
 @media (max-width: 768px) {
-  .gallery-container {
-    height: 400px;
+  .contenido-principal {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .gallery-item img {
-    object-fit: cover;
+  .info-redes, .gallery-container {
+    max-width: 100%;
+  }
+
+  .gallery-container {
+    height: 400px;
   }
 
   .nav-buttons {
@@ -167,9 +227,10 @@ onMounted(() => {
   }
 }
 
+/* En pantallas pequeñas (móviles) */
 @media (max-width: 600px) {
   .gallery-container {
-    height: 300px;
+    height: 350px;
   }
 
   .nav-buttons {
