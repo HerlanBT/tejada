@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="logo">
-        <img src="/public/LogoTejada.png" alt="Logo" />
+        <img src="/LogoTejada.png" alt="Logo" />
       </div>
     </div>
 

@@ -21,7 +21,7 @@
       </ul>
 
       <!-- ✅ Mostrar solo el botón "Volver" si no estamos en Inicio -->
-      <button v-else @click="goToHome" class="back-button">Volver</button>
+      <button v-else @click="goToHome" class="back-button">Volver a la Página Principal</button>
     </nav>
   </header>
 </template>

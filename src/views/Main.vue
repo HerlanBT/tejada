@@ -19,11 +19,17 @@
     </section>
   </div>
 
-  <div class="contenedor-seccion">
+  <!-- <div class="contenedor-seccion">
     <section class="seccion-con-fondo adicional Noticias">
       <div class="contenido-ajustado">
         <Noticias />
       </div>
+    </section>
+  </div> -->
+
+    <div class="contenedor-seccion">
+    <section ref="nosotros" class="seccion-con-fondo monografias">
+      <button class="boton-seccion" @click="irAMonografias">Monografías</button>
     </section>
   </div>
 
@@ -34,12 +40,12 @@
       </div>
     </section>
   </div>
+
 </div>
 
     <Footer />
   </main>
 </template>
-
 <script setup>
 import { ref } from "vue";
 import { useRouter } from 'vue-router';
@@ -71,6 +77,10 @@ const irAGaleria = () => {
 const irNosotros = () => {
   router.push('/nosotros');
 };
+const irAMonografias = () => {
+  router.push('/monografias')
+}
+
 </script>
 
 <style scoped>
@@ -130,6 +140,11 @@ const irNosotros = () => {
 
 .nosotros {
   background-image: url('../assets/nosotros.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+.monografias {
+  background-image: url('../assets/monografia.jpg');
   background-color: rgba(0, 0, 0, 0.5);
 
 }

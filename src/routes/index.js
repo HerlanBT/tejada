@@ -6,6 +6,8 @@ import Galeria from '../components/Galeria.vue';
 import NotFound from '../views/NotFound.vue'; // Asegúrate de que este archivo existe
 import GaleriaImagenes from '../components/Galeria-Imagenes.vue';
 import Nosotros from '../components/Nosotros.vue';
+import Monografias from '../components/Monografias.vue';
+import VisorPDF from '@/components/VisorPDF.vue';
 const routes = [
   { path: '/', component: Home },
   { path: '/admin-home', component: Admin, },
@@ -13,6 +15,8 @@ const routes = [
   { path: '/galeria', component: GaleriaImagenes },
   { path: '/galeria/:categoria', component: Galeria },
   { path: '/nosotros', component: Nosotros },
+  {path:'/monografias',component: Monografias},
+    {path:'/visor',component: VisorPDF},
   { path: '/:pathMatch(.*)*', component: NotFound }, // Ruta 404
 ];
 
