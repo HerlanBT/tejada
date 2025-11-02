@@ -39,7 +39,7 @@ onMounted(() => {
   }
 
   // ✅ Ruta correcta a tu carpeta /public/pdf/
-  pdfUrl.value = `/pdf/monografias-2025/${fileName}#toolbar=0&navpanes=0&scrollbar=0`
+  pdfUrl.value = `../pdf/monografias-2025/${fileName}#toolbar=0&navpanes=0&scrollbar=0`
 })
 </script>
 
